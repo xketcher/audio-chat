@@ -21,3 +21,7 @@ async def websocket_endpoint(websocket: WebSocket):
 @app.get("/")
 async def get():
     return HTMLResponse("Group Audio Chat Server Running")
+
+@app.get("/ping")
+async def ping():
+    return {"status": "ok"}
